@@ -1,0 +1,29 @@
+.pagination__wrapper {
+   margin-top: rem(10);
+   @include adaptiveValue("padding", 15, 5);
+
+   .pagination__container {
+      .pagination__content {
+         color: white;
+         font-size: rem(25);
+         display: flex;
+         @include adaptiveValue("column-gap", 15, 10);
+
+
+         button {
+            @include adaptiveValue("padding", 15, 5);
+            background-color: green;
+            border: 1px solid #000;
+            border-radius: rem(12);
+
+            &:hover {
+               background-color: red;
+            }
+         }
+
+         .current {
+            background-color: red;
+         }
+      }
+   }
+}

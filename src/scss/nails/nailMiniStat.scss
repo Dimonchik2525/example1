@@ -1,0 +1,71 @@
+.nail__header__miniStat {}
+
+.stat__wrapper {
+   border: 1px solid yellow;
+   background-color: rgb(143, 226, 189);
+   border-radius: rem(12);
+   flex: 1 1 auto;
+   font-size: rem(25);
+
+   .stat__content {
+      display: flex;
+      justify-content: space-between;
+      padding: rem(20);
+      column-gap: rem(15);
+
+      @media (max-width:rem(500)) {
+         row-gap: rem(20);
+         justify-content: start;
+         flex-direction: column;
+      }
+
+      div {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         row-gap: rem(10);
+      }
+   }
+}
+
+.stat__amount {
+   .stat__amount__title {}
+
+   .stat__amount__value {
+      font-size: rem(30);
+      font-weight: 900;
+      color: red;
+   }
+}
+
+.stat__average-price {
+   .stat__average-price__title {}
+
+   .stat__average-price__value {
+      font-size: rem(30);
+      font-weight: 900;
+      color: red;
+   }
+}
+
+.stat__workDays {
+   .stat__workDays__title {}
+
+   .stat__workDays__value {
+      font-size: rem(30);
+      font-weight: 900;
+      color: red;
+   }
+}
+
+.stat__clientsAmount {
+   .stat__clientsAmount__title {}
+
+   .stat__clientsAmount__value {
+      font-size: rem(30);
+      font-weight: 900;
+      color: red;
+   }
+}

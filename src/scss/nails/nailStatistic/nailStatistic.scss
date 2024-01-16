@@ -1,0 +1,136 @@
+.statistic__wrapper {
+
+   .statictic__container {
+      .statistic__content {
+         background-color: white;
+         border-radius: rem(20);
+         margin-bottom: rem(20);
+
+         .diagram__wrapper {
+            padding: rem(20);
+
+            .diagram__content {
+               margin-top: rem(30);
+               display: flex;
+               flex-direction: column;
+               row-gap: rem(75);
+
+               .diagram__bars__price {
+                  display: flex;
+                  flex-direction: column;
+                  row-gap: rem(35);
+
+                  .diagram__bars__price__title {
+                     font-size: rem(30);
+                     color: red;
+                     font-weight: 900;
+                     text-align: center;
+                  }
+               }
+
+               .diagram__bars__amount {
+                  display: flex;
+                  flex-direction: column;
+                  row-gap: rem(35);
+
+                  .diagram__bars__amount__title {
+                     font-size: rem(30);
+                     color: red;
+                     font-weight: 900;
+                     text-align: center;
+                  }
+               }
+
+               .diagram__bars__averagePrice {
+                  display: flex;
+                  flex-direction: column;
+                  row-gap: rem(35);
+
+                  .diagram__bars__averagePrice__title {
+                     font-size: rem(30);
+                     color: red;
+                     font-weight: 900;
+                     text-align: center;
+                  }
+               }
+
+            }
+         }
+      }
+   }
+}
+
+.diagram__bars {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   @include adaptiveValue("column-gap", 15, 13);
+   row-gap: rem(25);
+
+   @media (max-width:rem(1250)) {
+      flex-wrap: wrap;
+   }
+
+   .diagram__bar {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(15);
+      align-items: center;
+      width: rem(100);
+      @include adaptiveValue("row-gap", 15, 8);
+      @include adaptiveValue("width", 100, 57);
+
+      .diagram__bar__empty {
+         border: 1px solid #000;
+         height: rem(150);
+         width: rem(70);
+         display: flex;
+         flex-direction: column-reverse;
+         @include adaptiveValue("width", 70, 38);
+
+         .diagram__bar__empty__red {
+            background-color: red;
+         }
+      }
+
+      .diagram__bar__price {
+         @include adaptiveValue("font-size", 30, 18);
+      }
+
+      .diagram__bar__month {
+         @include adaptiveValue("font-size", 20, 13);
+      }
+   }
+}
+
+.statistic__filter {
+   padding: rem(10);
+   font-size: rem(35);
+
+   .statistic__filter__year {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(15);
+
+      .statistic__filter__year__title {
+         font-weight: 800;
+         color: red;
+      }
+
+      select {
+         font-size: rem(25);
+         color: white;
+         max-width: rem(130);
+         border: 1px solid #000;
+         padding: rem(5);
+         border-radius: rem(12);
+         background-color: sandybrown;
+
+         @media (any-hover: hover) {
+            &:hover {
+               cursor: pointer;
+            }
+         }
+      }
+   }
+}

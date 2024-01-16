@@ -1,0 +1,67 @@
+.nail__header__wrapper {
+   .nail__header__container {
+      .nail__header__content {}
+   }
+}
+
+.nail__header__options {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   column-gap: rem(20);
+
+   .nail__header__copyInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: rem(5);
+
+      button {
+         font-size: rem(20);
+         font-weight: 800;
+         border-radius: rem(12);
+         border: 0.5px solid #000;
+         padding: rem(7);
+         background-color: rgb(176, 236, 236);
+
+         @media (any-hover: hover) {
+            &:hover {
+               background-color: rgb(91, 145, 145);
+            }
+         }
+      }
+
+      input {
+         max-width: rem(70);
+         border-radius: rem(12);
+         background-color: red;
+         border: 1px solid #000;
+         padding: rem(3) rem(10);
+         text-align: center;
+         color: white;
+      }
+   }
+}
+
+.nail__header__filterStat {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   row-gap: rem(15);
+
+   @media (max-width:rem(1060)) {
+      flex-direction: column-reverse;
+      row-gap: rem(15);
+      justify-content: start;
+   }
+}
+
+
+.nail__header__miniStat {
+   flex: 1 1 auto;
+   max-width: rem(900);
+
+   @media (max-width:rem(1060)) {
+      max-width: 100%;
+   }
+}

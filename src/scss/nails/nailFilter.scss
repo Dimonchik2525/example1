@@ -1,0 +1,166 @@
+::-webkit-scrollbar {
+   width: 0;
+   /* Remove scrollbar space */
+}
+
+/* Optional: You can style the track and handle if needed */
+::-webkit-scrollbar-track {
+   background-color: transparent;
+   /* Change to your desired color */
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: transparent;
+   /* Change to your desired color */
+}
+
+.filter__wrapper {
+   margin-top: rem(20);
+   display: flex;
+   flex-direction: column;
+   column-gap: rem(35);
+   row-gap: rem(20);
+   font-size: rem(22);
+   flex-wrap: wrap;
+
+   .filter__date {
+      display: flex;
+      column-gap: rem(15);
+
+      input {
+         @media (any-hover: hover) {
+            &:hover {
+               cursor: pointer;
+            }
+         }
+      }
+
+      @media (max-width:rem(512)) {
+         flex-wrap: wrap;
+         row-gap: rem(20);
+      }
+
+      select {
+         font-size: rem(22);
+         max-width: rem(300);
+         border: 1px solid aqua;
+         border-radius: rem(12);
+         padding: rem(7);
+         background-color: greenyellow;
+
+         @media (any-hover: hover) {
+            &:hover {
+               cursor: pointer;
+            }
+         }
+      }
+
+      input {
+         width: 100%;
+         border: 1px solid aqua;
+         border-radius: rem(12);
+         padding: rem(7);
+         background-color: greenyellow;
+      }
+
+      .filter__year {}
+
+      .filter__month {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: rem(130);
+         height: rem(43);
+         position: relative;
+         background-color: greenyellow;
+         border: 1px solid aqua;
+         border-radius: rem(12);
+         text-align: center;
+
+
+         ul {
+
+            li {
+               padding: rem(7);
+               cursor: pointer;
+
+               &:not(:first-child) {
+                  @media (any-hover: hover) {
+                     &:hover {
+                        cursor: pointer;
+                        background-color: white;
+                     }
+                  }
+               }
+            }
+
+            width: rem(130);
+            text-align: center;
+            border-radius: rem(12);
+            overflow:scroll;
+            font-size: rem(22);
+            max-height: rem(200);
+            background-color: greenyellow;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1.5;
+         }
+      }
+
+   }
+
+   .filter__options {
+      display: flex;
+      column-gap: rem(15);
+      align-items: center;
+
+      @media (max-width:rem(512)) {
+         flex-wrap: wrap;
+         row-gap: rem(20);
+      }
+
+      .filter__search {
+         max-width: rem(300);
+
+         input {
+            font-size: rem(22);
+            border: 1px solid aqua;
+            border-radius: rem(12);
+            padding: rem(7);
+            background-color: greenyellow;
+         }
+      }
+
+      .filter__reverse {
+         font-size: rem(25);
+         color: red;
+         border: 1px solid aqua;
+         border-radius: rem(12);
+         padding: rem(7);
+         background-color: white;
+
+         @media (any-hover: hover) {
+            &:hover {
+               cursor: pointer;
+            }
+         }
+
+         img {
+            width: rem(35);
+            height: rem(35);
+
+            @media (min-width:rem(1060)) {
+               display: none;
+            }
+         }
+
+         P {
+            @media (max-width:rem(1060)) {
+               display: none;
+            }
+         }
+      }
+   }
+
+}

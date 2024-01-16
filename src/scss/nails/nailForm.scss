@@ -1,0 +1,103 @@
+.nail__main__wrapper {
+   .nail__main__container {
+      .nail__main__content {
+         display: flex;
+         flex-direction: column;
+         row-gap: rem(25);
+         margin-top: rem(25);
+         margin-bottom: rem(20);
+      }
+   }
+}
+
+.nail__form__wrapper {
+
+   .nail__form__container {
+
+      .nail__form__block {
+         border: 1px solid yellowgreen;
+         background-color: red;
+         display: flex;
+         row-gap: rem(15);
+         font-size: rem(35);
+         border-radius: rem(15);
+         padding: rem(15);
+         color: white;
+         @include adaptiveValue("font-size", 35, 25, 1100, 320, 1);
+         justify-content: space-between;
+         column-gap: rem(25);
+
+         @media (max-width:rem(500)) {
+            flex-direction: column;
+            row-gap: rem(15);
+         }
+
+         @media (any-hover: hover) {
+            &:hover {
+               cursor: pointer;
+               border: 1px solid white;
+               background-color: rgb(233, 107, 107)
+            }
+         }
+      }
+   }
+}
+
+.nail__form__content {
+   display: flex;
+   flex-direction: column;
+   row-gap: rem(15);
+   border-radius: rem(15);
+
+   .nail__form__title {
+      @media (max-width:rem(500)) {
+         @include adaptiveValue("font-size", 25, 23);
+      }
+   }
+
+   .nail__form__price {}
+
+   .nail__form__date {}
+}
+
+.nail__form__options {
+   display: flex;
+   flex-direction: column;
+   row-gap: rem(15);
+   align-items: end;
+   column-gap: rem(15);
+
+   @media (max-width:rem(500)) {
+      flex-direction: row;
+      align-items: start;
+   }
+
+   .nail__form__options__changes {
+      display: flex;
+      column-gap: rem(15);
+
+      .nail__form__options__edit {
+         border: 1px solid #000;
+         border-radius: rem(12);
+         padding: rem(5);
+         background-color: green;
+      }
+
+      .nail__form__options__remove {
+         border: 1px solid #000;
+         border-radius: rem(12);
+         padding: rem(5) rem(10);
+         background-color: white;
+         color: red;
+
+      }
+   }
+
+   .nail__form__options__addClient {
+      border: 1px solid #000;
+      border-radius: rem(12);
+      padding: rem(5);
+      background-color: greenyellow;
+
+   }
+}

@@ -1,0 +1,181 @@
+.client__wrapper {
+   margin-top: rem(20);
+
+   .client__container {
+      position: relative;
+
+      .client__content {
+         background-color: rgb(213, 175, 175);
+         padding: rem(20);
+         display: flex;
+         flex-direction: column;
+         row-gap: rem(30);
+         height: 100%;
+         margin-bottom: rem(20);
+         color: lightyellow;
+
+         .client__title {
+            font-weight: 750;
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(15);
+
+            span {
+               font-weight: 800;
+               @include adaptiveValue("font-size", 40, 25);
+               color: red;
+            }
+
+            text-align: center;
+            @include adaptiveValue("font-size", 30, 25);
+         }
+
+         .client__block {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(20);
+            @include adaptiveValue("font-size", 20, 15);
+            font-weight: 700;
+
+            span {
+               font-weight: 800;
+               @include adaptiveValue("font-size", 25, 20);
+               color: red;
+            }
+         }
+      }
+
+      .back {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: rem(70);
+         height: rem(30);
+         background-color: white;
+         color: red;
+         font-weight: 800;
+         border-radius: rem(12);
+         position: absolute;
+         top: rem(-15);
+         left: rem(0);
+         @include adaptiveValue("font-size", 20, 15);
+         @include adaptiveValue("padding", 20, 7);
+
+         @media (any-hover: hover) {
+            &:hover {
+               cursor: pointer;
+               color: white;
+               background-color: red;
+            }
+         }
+      }
+   }
+}
+
+.client__block {
+
+
+   .client__block__status {
+      display: flex;
+      column-gap: rem(7);
+      align-items: center;
+
+      &::before {
+         content: '';
+         width: 10px;
+         height: 10px;
+         border-radius: 50%;
+         background-color: red;
+      }
+   }
+
+   .client__block__price {
+      display: flex;
+      column-gap: rem(7);
+      align-items: center;
+
+      &::before {
+         content: '';
+         width: 10px;
+         height: 10px;
+         border-radius: 50%;
+         background-color: red;
+      }
+   }
+
+   .client__block__visits {
+      display: flex;
+      column-gap: rem(7);
+      align-items: center;
+
+      &::before {
+         content: '';
+         width: 10px;
+         height: 10px;
+         border-radius: 50%;
+         background-color: red;
+      }
+   }
+
+   .client__block__leaderBoard {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(15);
+
+      .client__block__leaderBoard__price {
+         display: flex;
+         column-gap: rem(7);
+         align-items: center;
+
+         &::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+         }
+      }
+
+      .client__block__leaderBoard__visits {
+         display: flex;
+         column-gap: rem(7);
+         align-items: center;
+
+         &::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+         }
+      }
+   }
+
+   .client__block__firstVisit {
+      display: flex;
+      column-gap: rem(7);
+      align-items: center;
+
+      &::before {
+         content: '';
+         width: 10px;
+         height: 10px;
+         border-radius: 50%;
+         background-color: red;
+      }
+   }
+
+   .client__block__lastVisit {
+      display: flex;
+      column-gap: rem(7);
+      align-items: center;
+
+      &::before {
+         content: '';
+         width: 10px;
+         height: 10px;
+         border-radius: 50%;
+         background-color: red;
+      }
+   }
+}
