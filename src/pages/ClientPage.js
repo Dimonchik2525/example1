@@ -113,6 +113,7 @@ export default function ClientPage(props) {
             <div onClick={click} className="back">
                <div >Back</div>
             </div>
+
          </div>
       </div>
    )

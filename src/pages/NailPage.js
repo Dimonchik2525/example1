@@ -19,8 +19,8 @@ export default function NailPage() {
    }, [clients])
 
    useEffect(() => {
-      if (localStorage.getItem('clients')) {
-         let result = JSON.parse(localStorage.getItem('clients'))
+      if (localStorage.getItem('clients1')) {
+         let result = JSON.parse(localStorage.getItem('clients1'))
          result.map((item) => {
             let date = new Date(item.date)
             date.setHours(0, 0, 0, 0)
@@ -34,7 +34,7 @@ export default function NailPage() {
    }, [])
 
    useEffect(() => {
-      localStorage.setItem('clients', JSON.stringify(clients))
+      localStorage.setItem('clients1', JSON.stringify(clients))
    }, [clients])
    //console.log(JSON.parse(localStorage.getItem('clients')))
    //localStorage.clear()
@@ -56,6 +56,7 @@ export default function NailPage() {
       }
       if (filter.date) {
          let day = new Date(filter.date)
+         newArr.map((item, i) => item.date.setHours(0))
          day.setHours(0)
          let example = newArr.filter((item) => (day - item.date) == 0)
          newArr = example
@@ -84,6 +85,7 @@ export default function NailPage() {
    }
 
    function addClient(client) {
+      //console.log(client)
       setClients([...clients, client])
    }
 

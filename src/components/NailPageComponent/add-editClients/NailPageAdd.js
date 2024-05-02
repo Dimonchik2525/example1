@@ -1,3 +1,4 @@
+import { logDOM } from "@testing-library/react"
 import { useEffect, useRef, useState } from "react"
 
 
@@ -48,7 +49,7 @@ export default function NailPageAdd(props) {
                         let date = new Date(addClient.date)
                         date.setHours(0)
                         props.addClient({
-                           id: +props.clients[props.clients.length - 1].id + 1,
+                           id: +props.clients[props.clients.length - 1].id + 1 + Math.random(),
                            name: addClient.name,
                            price: addClient.price,
                            date: date

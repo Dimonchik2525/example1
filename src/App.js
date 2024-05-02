@@ -7,7 +7,7 @@ import Navigate from "./components/header/Navigate";
 
 
 function App() {
-
+   //basename="https://dimonchik2525.github.io/example1/"
    let [login, setLogin] = useState(false)
    let [mainPage, setMainPage] = useState(false)
 
